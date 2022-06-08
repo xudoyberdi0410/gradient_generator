@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate linear and radial gradients">
+    <meta name="author" content="Khudoberdi">
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header class="gradient-view"></header>
+        <main>
+            <div class="mode">
+                <label>
+                    <input type="radio" class="mode_choose" name="mode" id="linear">
+                    <span>Linear</span>
+                </label>
+                <label>
+                    <input type="radio" class="mode_choose" name="mode" id="radial">
+                    <span>Radial</span>
+                </label>
+            </div>
+            <div class="deg">
+                <label>
+                    <span>Rotate: </span>
+                    <input type="number" id="deg" value=90>
+                </label>
+            </div>
+            <div class="colors-choose">
+                <div class="headers">
+                    <span>Color</span>
+                    <span>Stop</span>
+                    <span>Del</span>
+                </div>
+                <div class="colors">
+                    <div class="one-color">
+                        <input type="color" class="color">
+                        <input type="number" value="0">
+                        <img src="./x-lg.svg" alt="x" class="close" onclick="remove_color(event)">
+                    </div>
+                    <div class="one-color">
+                        <input type="color" class="color">
+                        <input type="number" value="100">
+                        <img src="./x-lg.svg" alt="x" class="close" onclick="remove_color(event)">
+                    </div>
+                </div>
+                <button onclick="addColor()" class="add">Add</button>
+            </div>
+            <button onclick="get_values()" class="generate">Generate</button>
+        </main>
+    </div>
+    <div class="wrapper-css wrapper">
+        <span id="css-code"></span>
+        <button id="copy">
+            <span id="copied">Copied!</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+            </svg>
+        </button>
+    </div>
+    <script src="./app.js">
+
+    </script>
+</body>
+</html>

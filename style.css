@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+body{
+    background-color: #6633CC;
+    font-family: sans-serif;
+}
+.wrapper{
+    width: 50vmin;
+    background-color: #23235B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+.mode{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.mode label{
+    background-color: #3B3B98;
+    height: fit-content;
+    height: 2em;
+    width: 4em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.mode label span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+.mode label input{
+    visibility: hidden;
+    position: absolute;
+}
+.mode label input:checked + span{
+    background-color: #6633CC;
+}
+input{
+    color: #000;
+}
+.deg, .colors-choose, main{
+    width: 100%;
+}
+.deg label, .one-color, .headers{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.deg label input, .one-color input{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+.colors-choose{
+    display: flex;
+    flex-direction: column;
+}
+.colors{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.close{
+    cursor: pointer;
+}
+.close:hover{
+    opacity: 0.7;
+}
+.close:active{
+    padding-top: 2px;
+    opacity: 0.5;
+}
+.add{
+    margin: 20px auto 0;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #3B3B98;
+    border: none;
+    box-shadow: 0 0 2px #6633CC;
+}
+.add:hover{
+    background-color: #6633CC;
+}
+.add:active{
+    box-shadow: none;
+}
+.generate{
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #3B3B98;
+    border: none;
+    box-shadow: 0 0 2px #6633CC;
+}
+.generate:hover{
+    background-color: #6633CC;
+}
+.generate:active{
+    margin-top: 1px;
+}
+.wrapper-css{
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    display: none;
+}
+.wrapper-css span{
+    margin: 5px;
+}
+button#copy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #3B3B98;
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 0 2px #6633CC;
+    align-self: center;
+}
+button#copy:hover{
+    background-color: #6633CC;
+}
+button#copy:active{
+    box-shadow: none;
+}
+svg#copied{
+    fill: #fff;
+}
+#copied{
+    display: none;
+}
