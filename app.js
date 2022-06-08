@@ -41,7 +41,7 @@ function addColor() {
         <div class="one-color">
             <input type="color" class="color">
             <input type="number" value="100">
-            <img src="./x-lg.svg" alt="x" class="close" onclick="remove_color(event)">
+            <img src="./images/x-lg.svg" alt="x" class="close" onclick="remove_color(event)">
         </div>`
         colorsCount++
     }
