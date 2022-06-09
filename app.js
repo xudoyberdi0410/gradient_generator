@@ -39,8 +39,8 @@ function addColor() {
     if (colorsCount<maxColors) {
         document.querySelector(".colors").innerHTML += `
         <div class="one-color">
-            <input type="color" class="color">
-            <input type="number" value="100">
+            <input type="color" class="color" value="#ff0000" onchange="get_values()">
+            <input type="number" value="100"  min="0" max="100" onchange="get_values()">
             <img src="./images/x-lg.svg" alt="x" class="close" onclick="remove_color(event)">
         </div>`
         colorsCount++
@@ -49,6 +49,7 @@ function addColor() {
         document.querySelector('.add').style.display = 'none'
     }
 }
+
 function remove_color(event){
     if (colorsCount > minColors){
         event.target.parentNode.remove()
@@ -63,3 +64,4 @@ document.getElementById("copy").onclick = () => {
         document.getElementById("copied").style.display = 'none'
     }, 3000)
 }
+get_values()

@@ -60,6 +60,9 @@ main{
 .mode label input:checked + span{
     background-color: #6633CC;
 }
+.mode_choose{
+    cursor: pointer;
+}
 input{
     color: #000;
 }
@@ -132,13 +135,14 @@ input{
     margin-top: 1px;
 }
 .wrapper-css{
-    height: 100px;
+    height: 120px;
     padding: 10px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     display: none;
+    overflow-y: auto;
 }
 .wrapper-css span{
     margin: 5px;

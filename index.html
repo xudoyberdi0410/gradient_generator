@@ -17,18 +17,18 @@
         <main>
             <div class="mode">
                 <label>
-                    <input type="radio" class="mode_choose" name="mode" id="linear">
+                    <input type="radio" class="mode_choose" name="mode" id="linear" onchange="get_values()">
                     <span>Linear</span>
                 </label>
                 <label>
-                    <input type="radio" class="mode_choose" name="mode" id="radial">
+                    <input type="radio" class="mode_choose" name="mode" id="radial" onchange="get_values()">
                     <span>Radial</span>
                 </label>
             </div>
             <div class="deg">
                 <label>
                     <span>Rotate: </span>
-                    <input type="number" id="deg" value=90>
+                    <input type="number" id="deg" value=90  onchange="get_values()">
                 </label>
             </div>
             <div class="colors-choose">
@@ -39,17 +39,17 @@
                 </div>
                 <div class="colors">
                     <div class="one-color">
-                        <input type="color" class="color">
-                        <input type="number" value="0">
-                        <img src="./images/x-lg.svg" alt="x" class="close" onclick="remove_color(event)">
+                        <input type="color" class="color" value="#ffffff" onchange="get_values()">
+                        <input type="number" value="0"  min="0" max="100" onchange="get_values()">
+                        <img src="./images/x-lg.svg" alt="x" class="close" onclick="remove_color(event); get_values()">
                     </div>
                     <div class="one-color">
-                        <input type="color" class="color">
-                        <input type="number" value="100">
+                        <input type="color" class="color" onchange="get_values()">
+                        <input type="number" value="100" min="0" max="100" onchange="get_values()">
                         <img src="./images/x-lg.svg" alt="x" class="close" onclick="remove_color(event)">
                     </div>
                 </div>
-                <button onclick="addColor()" class="add">Add</button>
+                <button onclick="addColor()" onchange="get_values()" class="add">Add</button>
             </div>
             <button onclick="get_values()" class="generate">Generate</button>
         </main>
